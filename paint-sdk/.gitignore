@@ -1,0 +1,4 @@
+# 用于控制父项目不可提交的
+paint-sdk.iml
+/target
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jlkj.common.sdk</groupId>
+    <artifactId>sdk-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <description>君联科技公用SDK夹包管理</description>
+
+    <modules>
+        <module>pay-sdk</module>
+        <module>ocr-sdk</module>
+        <module>paint-sdk</module>
+        <module>wechat-sdk</module>
+    </modules>
+
+    <!--将Maven上传到远程仓库的配置信息-->
+    <distributionManagement>
+        <repository>
+            <id>aicard</id>
+            <name>aicard</name>
+            <url>http://192.168.1.25:8081/repository/aicard/</url>
+        </repository>
+        <snapshotRepository>
+            <id>aicard</id>
+            <name>aicard</name>
+            <url>http://192.168.1.25:8081/repository/aicard/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- 变量 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <compiler-version>3.1</compiler-version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler-version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
